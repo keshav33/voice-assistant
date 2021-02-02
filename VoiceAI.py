@@ -73,12 +73,12 @@ def sendEmail(to,content):
     server = smtplib.SMTP('smtp.gmail.com:587')
     server.ehlo()
     server.starttls()
-    server.login("keshavnnrg33@gmail.com","cooldudes@1")
+    server.login("*Your Email ID*","*Your Password*")
     print("success4")
     speak("do you want to send the email")
     confirm = takeCommand().lower()
     if "yes" in confirm:
-        server.sendmail("keshavnnrg33@gmail.com", to, content)
+        server.sendmail("*Your Email ID*", to, content)
         server.close()
     else:
         speak("email not sent")
@@ -250,9 +250,9 @@ def main():
             url = "https://www.netflix.com/search?q="+movie_name
             driver.get(url)
             username = driver.find_element_by_id("id_userLoginId")
-            username.send_keys("keshavnnrg33@gmail.com")
+            username.send_keys("*Your Email ID*")
             password = driver.find_element_by_id("id_password")
-            password.send_keys("qwertylol")
+            password.send_keys("*Your Password")
             loginbutton = driver.find_element_by_css_selector("button.btn.login-button.btn-submit.btn-small").click()
             time.sleep(5)
             profile = driver.find_elements_by_css_selector("div.profile-icon")
